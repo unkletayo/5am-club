@@ -1,48 +1,18 @@
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { Container } from "@/components/ui/container";
-import { useGsap } from "@/hooks/use-gsap";
-import gsap from "gsap";
 
 export function HabitInstallation() {
-  const container = useRef<HTMLDivElement>(null);
   const steps = [
     { phase: "Destruction", days: "Days 1-22", desc: "Extreme resistance. You are destroying old neural pathways. Requires raw discipline and grit." },
     { phase: "Installation", days: "Days 23-44", desc: "The messy middle. It feels chaotic, but your brain is remapping itself. Keep going." },
     { phase: "Integration", days: "Days 45-66", desc: "Automaticity. The habit becomes your new normal. You have successfully updated your identity." }
   ];
 
-  useGsap(() => {
-    if (!container.current) return;
-    const q = gsap.utils.selector(container.current);
-
-    gsap.from(q(".habit-header"), {
-      opacity: 0,
-      y: 30,
-      duration: 1,
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top 80%",
-      }
-    });
-
-    gsap.from(q(".habit-step"), {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      stagger: 0.2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top 70%",
-      }
-    });
-  }, [container]);
-
   return (
-    <section ref={container} className="py-32 bg-background relative overflow-hidden">
+    <section className="py-32 bg-background relative overflow-hidden">
       <Container>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-24 habit-header">
+          <div className="text-center mb-24">
             <h3 className="text-primary font-bold tracking-widest text-sm uppercase mb-4">⚙️ The 66-Day Protocol</h3>
             <h4 className="text-4xl md:text-6xl font-serif font-bold mb-8">Habit Installation</h4>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto italic font-serif">
@@ -52,9 +22,13 @@ export function HabitInstallation() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {steps.map((item, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="habit-step group relative p-10 rounded-3xl bg-card border border-border hover:border-primary/50 transition-all duration-500 shadow-xl"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="group relative p-10 rounded-3xl bg-card border border-border hover:border-primary/50 transition-all duration-500 shadow-xl"
               >
                 <div className="absolute top-0 right-0 p-8 text-6xl font-serif font-bold opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
                   0{i + 1}
@@ -68,7 +42,7 @@ export function HabitInstallation() {
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   {item.desc}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

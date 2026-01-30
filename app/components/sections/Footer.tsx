@@ -1,11 +1,12 @@
 import { Container } from "@/components/ui/container";
+import { ArrowRight } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="bg-background text-foreground py-24 border-t border-border relative z-10">
       <Container>
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
-          <div className="space-y-8">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center md:items-end gap-12 text-center md:text-left">
+          <div className="space-y-8 flex flex-col items-center md:items-start">
             <a
               href="https://www.emprintereaders.com/"
               target="_blank"
@@ -18,19 +19,27 @@ export function Footer() {
                 className="h-16 w-auto"
               />
             </a>
-            <div className="text-sm text-muted-foreground">
-              <p>
-                Curated by{" "}
-                <a href="https://www.linkedin.com/in/olalekan-gbolahan-owolabi" className="text-primary hover:underline transition-colors">Olalekan "Gabriel" Owolabi</a>
-                {" "}and{" "}
-                <a href="https://www.linkedin.com/in/adetayo-akinsanya/" className="text-primary hover:underline transition-colors">Adetayo Akinsanya</a>
-              </p>
-              <p className="opacity-50 mt-1">© 2026 Emprinte Readers Hub</p>
+            <div className="text-sm text-muted-foreground flex flex-col items-center md:items-start gap-4">
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                <a
+                  href="https://www.linkedin.com/in/olalekan-gbolahan-owolabi"
+                  className="inline-flex items-center px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/5 hover:border-primary/50 text-primary transition-all font-medium"
+                >
+                  Gabriel Owolabi <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/adetayo-akinsanya/"
+                  className="inline-flex items-center px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/5 hover:border-primary/50 text-primary transition-all font-medium"
+                >
+                  Adetayo Akinsanya <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
+              </div>
+              <p className="opacity-50">© 2026 Emprinte Readers Hub • Curated with Excellence</p>
             </div>
           </div>
 
-          <div className="text-right">
-            <p className="text-3xl font-serif italic mb-2">Victory is built in private.</p>
+          <div className="md:text-right">
+            <p className="text-3xl md:text-4xl font-serif italic mb-2 text-foreground">Victory is built in private.</p>
             <p className="text-xl font-serif text-muted-foreground opacity-50 italic">Mastery is the standard.</p>
           </div>
         </div>

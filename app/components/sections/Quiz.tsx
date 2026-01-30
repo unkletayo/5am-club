@@ -89,6 +89,76 @@ const QUIZ_QUESTIONS: Question[] = [
     options: ["5", "10", "15", "20"],
     correct: 1,
     explanation: "Work for 60 minutes, then take 10 minutes to decompress and recharge."
+  },
+  {
+    id: 11,
+    text: "The 5-3-1 Rule for Nighttime: 3 hours before bed, no more ________",
+    options: ["Reading", "Food", "Exercise", "Caffeine"],
+    correct: 1,
+    explanation: "Stop eating 3 hours before sleep to allow your body to focus on repair, not digestion."
+  },
+  {
+    id: 12,
+    text: "The 5-3-1 Rule for Nighttime: 1 hour before bed, no more ________",
+    options: ["Music", "Stretching", "Screens", "Talking"],
+    correct: 2,
+    explanation: "Blue light from screens destroys melatonin and disrupts sleep quality."
+  },
+  {
+    id: 13,
+    text: "What is the 'University on Wheels'?",
+    options: ["Commuting by bike", "Learning while driving/commuting", "A traveling school", "Buying an RV"],
+    correct: 1,
+    explanation: "Turn your commute into a masterclass by listening to audiobooks and educational podcasts."
+  },
+  {
+    id: 14,
+    text: "Which Interior Empire is focused on your emotional health and gratitude?",
+    options: ["Mindset", "Heartset", "Healthset", "Soulset"],
+    correct: 1,
+    explanation: "Heartset is the discipline of emotional mastery and cultivating a grateful spirit."
+  },
+  {
+    id: 15,
+    text: "Which Interior Empire is focused on your connection to your true self and inner peace?",
+    options: ["Mindset", "Heartset", "Healthset", "Soulset"],
+    correct: 3,
+    explanation: "Soulset is your spiritual core, where you connect with your deepest purpose."
+  },
+  {
+    id: 16,
+    text: "In the 20/20/20 formula, what is the 'Reflect' block used for?",
+    options: ["Cardio", "Journaling and Meditation", "Planning the day", "Checking news"],
+    correct: 1,
+    explanation: "The second block (5:20-5:40) is for solitude, journaling, and deep reflection."
+  },
+  {
+    id: 17,
+    text: "In the 20/20/20 formula, what is the 'Grow' block used for?",
+    options: ["Weightlifting", "Personal Education", "Having Breakfast", "Social Media"],
+    correct: 1,
+    explanation: "The final block (5:40-6:00) is for escalating your mastery through learning."
+  },
+  {
+    id: 18,
+    text: "The '2-Massage Protocol' suggests two deep-tissue massages weekly to:",
+    options: ["Look better", "Reduce cortisol and relax", "Build muscle", "Save money"],
+    correct: 1,
+    explanation: "Massages are a high-performance tool to lower stress hormones and maintain peak flow."
+  },
+  {
+    id: 19,
+    text: "What is 'Digital Dementia' according to the philosophy?",
+    options: ["Forgetting passwords", "Losing your phone", "Cognitive decline from tech overuse", "Broken screens"],
+    correct: 2,
+    explanation: "Constant digital interruptions erode our focus and deep thinking capabilities."
+  },
+  {
+    id: 20,
+    text: "To lead your field, you must prioritize ________ above entertainment.",
+    options: ["Money", "Education", "Sleep", "Networking"],
+    correct: 1,
+    explanation: "Legendary leaders adore education. Average people love entertainment."
   }
 ];
 
@@ -100,6 +170,7 @@ const WhatsAppIcon = () => (
 
 export function Quiz() {
   const [gameState, setGameState] = useState<"landing" | "playing" | "finished">("landing");
+  const [activeQuestions, setActiveQuestions] = useState<Question[]>([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
@@ -107,6 +178,12 @@ export function Quiz() {
   const quizRef = useRef<HTMLDivElement>(null);
 
   const startQuiz = () => {
+    // Randomize and pick 10 questions
+    const shuffled = [...QUIZ_QUESTIONS]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 10);
+
+    setActiveQuestions(shuffled);
     setGameState("playing");
     setCurrentQuestion(0);
     setScore(0);
@@ -118,12 +195,12 @@ export function Quiz() {
     setSelectedOption(index);
     setIsShowingFeedback(true);
 
-    if (index === QUIZ_QUESTIONS[currentQuestion].correct) {
+    if (index === activeQuestions[currentQuestion].correct) {
       setScore(s => s + 1);
     }
 
     setTimeout(() => {
-      if (currentQuestion < QUIZ_QUESTIONS.length - 1) {
+      if (currentQuestion < activeQuestions.length - 1) {
         setCurrentQuestion(q => q + 1);
         setSelectedOption(null);
         setIsShowingFeedback(false);
@@ -135,8 +212,8 @@ export function Quiz() {
   };
 
   const handleShareResult = () => {
-    const status = score === QUIZ_QUESTIONS.length ? "LEGENDARY 💎" : score >= 3 ? "A RISING TITAN 🔥" : "ON THE JOURNEY 🌅";
-    const text = `*5 AM Club Audit Result*\n\nI just scored *${score}/${QUIZ_QUESTIONS.length}* in the Mastery Quiz!\n\n*Status:* ${status}\n\nJoin the club and elevate your life here: ${window.location.origin}`;
+    const status = score === activeQuestions.length ? "LEGENDARY 💎" : score >= 7 ? "A RISING TITAN 🔥" : "ON THE JOURNEY 🌅";
+    const text = `*5 AM Club Audit Result*\n\nI just scored *${score}/${activeQuestions.length}* in the Mastery Quiz!\n\n*Status:* ${status}\n\nJoin the club and elevate your life here: ${window.location.origin}`;
     const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
   };
@@ -183,7 +260,7 @@ export function Quiz() {
                   <Button
                     onClick={startQuiz}
                     size="lg"
-                    className="rounded-full px-12 py-8 text-xl group gap-4 transition-all hover:scale-105"
+                    className="rounded-full px-8 py-6 text-lg group gap-4 transition-all hover:scale-105"
                   >
                     Start Mastery Audit
                     <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
@@ -201,25 +278,25 @@ export function Quiz() {
                 >
                   <div className="flex justify-between items-center mb-8">
                     <span className="text-xs font-bold uppercase tracking-widest text-primary/40">
-                      Step 0{currentQuestion + 1} / 0{QUIZ_QUESTIONS.length}
+                      Step 0{currentQuestion + 1} / 0{activeQuestions.length}
                     </span>
                     <div className="h-1 flex-1 mx-8 bg-primary/10 rounded-full overflow-hidden">
                       <motion.div
                         className="h-full bg-primary"
                         initial={{ width: 0 }}
-                        animate={{ width: `${((currentQuestion + 1) / QUIZ_QUESTIONS.length) * 100}%` }}
+                        animate={{ width: `${((currentQuestion + 1) / activeQuestions.length) * 100}%` }}
                       />
                     </div>
                   </div>
 
                   <h5 className="text-2xl md:text-3xl font-serif font-bold leading-tight">
-                    {QUIZ_QUESTIONS[currentQuestion].text}
+                    {activeQuestions[currentQuestion].text}
                   </h5>
 
                   <div className="grid gap-4">
-                    {QUIZ_QUESTIONS[currentQuestion].options.map((option, idx) => {
+                    {activeQuestions[currentQuestion].options.map((option, idx) => {
                       const isSelected = selectedOption === idx;
-                      const isCorrect = idx === QUIZ_QUESTIONS[currentQuestion].correct;
+                      const isCorrect = idx === activeQuestions[currentQuestion].correct;
                       const showFeedback = isShowingFeedback;
 
                       return (
@@ -250,7 +327,7 @@ export function Quiz() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-center text-muted-foreground italic"
                       >
-                        {QUIZ_QUESTIONS[currentQuestion].explanation}
+                        {activeQuestions[currentQuestion].explanation}
                       </motion.p>
                     )}
                   </AnimatePresence>
@@ -269,10 +346,10 @@ export function Quiz() {
                   </div>
                   <div className="space-y-4">
                     <h5 className="text-5xl font-serif font-bold mb-4">
-                      {score === QUIZ_QUESTIONS.length ? "Legendary Status" : score >= 7 ? "Titan Rising" : "Still Learning"}
+                      {score === activeQuestions.length ? "Legendary Status" : score >= 7 ? "Titan Rising" : "Still Learning"}
                     </h5>
                     <p className="text-6xl font-mono text-primary font-bold">
-                      {score}/{QUIZ_QUESTIONS.length}
+                      {score}/{activeQuestions.length}
                     </p>
                     <p className="text-amber-500 font-bold tracking-widest text-lg animate-pulse">
                       📸 TAKE A SCREENSHOT & SHARE!
@@ -280,7 +357,7 @@ export function Quiz() {
                   </div>
 
                   <p className="text-xl text-muted-foreground max-w-lg mx-auto leading-relaxed">
-                    {score === QUIZ_QUESTIONS.length
+                    {score === activeQuestions.length
                       ? "You have fully installed the 5 AM Philosophy. You are ready to lead your empire."
                       : "The installation is in progress. Every morning is a new chance to reach mastery."}
                   </p>
@@ -289,7 +366,7 @@ export function Quiz() {
                     <Button
                       onClick={handleShareResult}
                       size="lg"
-                      className="rounded-full px-12 py-8 text-xl gap-4 transition-all bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold border-none shadow-[0_0_20px_-5px_#25D366]"
+                      className="rounded-full px-8 py-6 text-lg gap-4 transition-all bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold border-none shadow-[0_0_20px_-5px_#25D366]"
                     >
                       <WhatsAppIcon />
                       Share This Victory
@@ -298,7 +375,7 @@ export function Quiz() {
                       onClick={startQuiz}
                       variant="outline"
                       size="lg"
-                      className="rounded-full px-12 py-8 text-xl gap-4 border-primary/20 hover:bg-primary/5"
+                      className="rounded-full px-8 py-6 text-lg gap-4 border-primary/20 hover:bg-primary/5"
                     >
                       <RefreshCcw className="w-5 h-5" />
                       Try Again

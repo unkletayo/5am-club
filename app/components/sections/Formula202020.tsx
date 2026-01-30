@@ -95,13 +95,13 @@ export function Formula202020() {
         <div ref={trackRef} className="h-full bg-primary origin-left scale-x-0 w-full" />
       </div>
 
-      <div ref={panelsRef} className="flex flex-nowrap w-[300%] h-[60vh] md:h-[70vh] items-center mt-64 md:mt-32 md:mt-0 relative z-10">
+      <div ref={panelsRef} className="flex flex-nowrap w-[300%] h-[60vh] md:h-[70vh] items-center mt-80 md:mt-32 md:mt-0 relative z-10">
         {steps.map((step, index) => (
           <div
             key={index}
             className="panel w-screen flex-shrink-0 flex items-center justify-center px-4 md:px-0"
           >
-            <div className="relative group p-8 md:p-16 rounded-3xl bg-card border border-border/50 hover:border-primary/50 transition-colors max-w-2xl w-full mx-auto shadow-2xl backdrop-blur-md">
+            <div className="relative group p-8 md:p-16 rounded-3xl bg-card border border-border/50 hover:border-primary/50 transition-colors max-w-2xl w-full mx-auto shadow-2xl backdrop-blur-md min-h-[450px] flex flex-col justify-center">
               <div className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${step.color} rounded-t-3xl opacity-80`} />
 
               {/* Icon Container */}

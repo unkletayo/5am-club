@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Container } from "@/components/ui/container";
 import { useGsap } from "@/hooks/use-gsap";
-import gsap from "gsap";
+import gsap from "gsap/dist/gsap";
 import { TriangleAlert } from "lucide-react";
 
 export function Hero() {

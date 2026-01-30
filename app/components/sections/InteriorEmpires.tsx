@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Container } from "@/components/ui/container";
 import { useGsap } from "@/hooks/use-gsap";
-import gsap from "gsap";
+import gsap from "gsap/dist/gsap";
 
 const empires = [
   { name: "Mindset", desc: "Psychology", pct: "25%", color: "text-blue-400" },

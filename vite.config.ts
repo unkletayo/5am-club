@@ -10,4 +10,7 @@ export default defineConfig({
       "ed53d5a660b1.ngrok-free.app",
     ],
   },
+  ssr: {
+    noExternal: ["gsap"],
+  },
 });

@@ -1,14 +1,9 @@
-import { useLayoutEffect, useState } from "react";
-import gsap from "gsap";
+import gsap from "gsap/dist/gsap";
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
 }
 
-export function useGsap(effect: (context: gsap.Context) => any, deps: any[] = []) {
-  useLayoutEffect(() => {
-    const ctx = gsap.context(effect);
-    return () => ctx.revert();
-  }, deps);
-}
+export { useGSAP as useGsap };

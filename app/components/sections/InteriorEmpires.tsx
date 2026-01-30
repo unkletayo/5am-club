@@ -89,15 +89,15 @@ export function InteriorEmpires() {
   }, [container]);
 
   return (
-    <section ref={container} className="h-screen bg-[#050505] flex items-center justify-center relative overflow-hidden perspective-[1000px]">
+    <section ref={container} className="h-screen bg-background flex items-center justify-center relative overflow-hidden perspective-[1000px]">
 
       {/* Background Animated Gradient Orb */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-900/20 rounded-full blur-[100px] animate-pulse pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] animate-pulse pointer-events-none" />
 
       <Container className="relative z-10 flex flex-col items-center h-full justify-center">
 
         <div ref={titleRef} className="text-center mb-12 relative z-20">
-          <h2 className="text-5xl md:text-7xl font-serif font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">
+          <h2 className="text-5xl md:text-7xl font-serif font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/50">
             The 4 Interior Empires
           </h2>
           <p className="text-xl text-muted-foreground uppercase tracking-[0.3em]">Unlock your potential</p>
@@ -107,7 +107,7 @@ export function InteriorEmpires() {
           {empires.map((empire, i) => (
             <div
               key={i}
-              className="empire-card grid-border group relative flex flex-col items-center justify-center bg-white/5 border border-white/5 rounded-3xl backdrop-blur-md hover:bg-white/10 transition-colors duration-500"
+              className="empire-card grid-border group relative flex flex-col items-center justify-center bg-card border border-border rounded-3xl backdrop-blur-md hover:border-primary/50 transition-colors duration-500"
               style={{ transformStyle: "preserve-3d" }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />

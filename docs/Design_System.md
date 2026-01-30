@@ -16,37 +16,39 @@ Avoid trend-chasing.
 
 ---
 
-## Color System
+## Color System — _The Eternal Dawn_
 
-### Primary Gradient — _Morning Transition_
+The site transitions through four distinct emotional and visual phases, reflecting the journey from pre-dawn discipline to midday mastery.
 
-Represents darkness → clarity
+### Phase 1: Pre-Dawn Stillness (Midnight Galaxy)
+**Sections**: Hero, Identity
+*   **Deep Base**: `#2B1E3E` (Deep Purple)
+*   **Mystical Mid**: `#4A4E8F` (Cosmic Blue)
+*   **Soft Accent**: `#A490C2` (Lavender)
+*   **High Contrast**: `#E6E6FA` (Silver)
 
-```
-#1B1F3B  (Deep Indigo)
-#F2A65A  (Warm Amber)
-```
+### Phase 2: The Awakening (Golden Hour)
+**Sections**: Formula202020, Oscillation
+*   **Bold Primary**: `#F4A900` (Mustard Yellow)
+*   **Warm Secondary**: `#C1666B` (Terracotta)
+*   **Neutral Base**: `#D4B896` (Warm Beige)
+*   **Deep Text**: `#4A403A` (Chocolate Brown)
+
+### Phase 3: Growth & Resilience (Forest Canopy)
+**Sections**: Interior Empires, The Forge
+*   **Primary Dark**: `#2D4A2B` (Forest Green)
+*   **Muted Accent**: `#7D8471` (Sage)
+*   **Light Accent**: `#A4AC86` (Olive)
+*   **Background/Text**: `#FAF9F6` (Ivory)
+
+### Phase 4: The Clarity of Mastery (Arctic Frost)
+**Sections**: Consistency, Closing
+*   **Light Base**: `#D4E4F7` (Ice Blue)
+*   **Primary Accent**: `#4A6FA5` (Steel Blue)
+*   **Metallic Element**: `#C0C0C0` (Silver)
+*   **Clean Contrast**: `#FAFAFA` (Crisp White)
 
 ---
-
-### Secondary Gradient — _Focus & Growth_
-
-```
-#1F7A8C  (Muted Teal)
-#BFDBF7  (Soft Cyan)
-```
-
----
-
-### Neutral Palette
-
-- Background: Near-black
-- Text: Soft off-white
-
-```
-#0E0E11
-#F5F5F5
-```
 
 ---
 

@@ -7,19 +7,35 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
   const counterRef = useRef<HTMLDivElement>(null);
   const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    // Lock scroll
+    document.body.style.overflow = "hidden";
+    document.body.style.pointerEvents = "none";
+
+    return () => {
+      // Unlock scroll
+      document.body.style.overflow = "";
+      document.body.style.pointerEvents = "";
+    };
+  }, []);
+
   useGsap(() => {
     const tl = gsap.timeline({
+      delay: 0.1, // Minimal delay for smoother mount
       onComplete: () => {
+        window.scrollTo(0, 0);
         onComplete();
-        // Remove preloader from DOM visually (optional, depending on if unmounted)
-        gsap.set(container.current, { display: "none" });
+        gsap.to(container.current, {
+          display: "none",
+          duration: 0
+        });
       }
     });
 
     // Animate counter
     tl.to(counterRef.current, {
       innerText: 100,
-      duration: 2,
+      duration: 2.2,
       snap: { innerText: 1 },
       ease: "power2.inOut",
       onUpdate: function () {
@@ -32,16 +48,16 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
     // Animate "Curtain" reveal
     tl.to(container.current, {
       clipPath: "inset(0% 0% 100% 0%)",
-      duration: 1,
-      ease: "power4.inOut",
-    });
+      duration: 1.2,
+      ease: "expo.inOut",
+    }, "-=0.2");
 
   }, [container]);
 
   return (
     <div
       ref={container}
-      className="fixed inset-0 z-[100] bg-black flex items-center justify-center"
+      className="fixed inset-0 z-[9999] bg-black flex items-center justify-center pointer-events-auto select-none"
       style={{ clipPath: "inset(0% 0% 0% 0%)" }}
     >
       <div className="text-center">

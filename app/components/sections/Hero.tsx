@@ -36,7 +36,7 @@ export function Hero() {
 
   return (
     <section ref={container} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1B1F3B] to-[#0E0E11] opacity-100 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background to-secondary/20 opacity-100 z-0" />
 
       {/* Cinematic Grain/Noise Overlay */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay"
@@ -46,17 +46,17 @@ export function Hero() {
       <Container className="relative z-10 flex flex-col items-center text-center px-4">
         <div ref={contentRef} className="max-w-4xl mx-auto flex flex-col items-center">
 
-          <div className="hero-alert mb-8 px-4 py-1 border border-destructive/50 bg-destructive/10 rounded-full flex items-center gap-2">
-            <TriangleAlert className="w-4 h-4 text-destructive" />
-            <span className="text-destructive font-bold tracking-widest uppercase text-xs md:text-sm">
+          <div className="hero-alert mb-8 px-4 py-1 border border-primary/50 bg-primary/10 rounded-full flex items-center gap-2">
+            <TriangleAlert className="w-4 h-4 text-primary" />
+            <span className="text-primary font-bold tracking-widest uppercase text-xs md:text-sm">
               Attention Soldiers
             </span>
           </div>
 
-          <h1 className="hero-title text-5xl md:text-8xl lg:text-9xl font-serif font-bold tracking-tighter text-amber-50/90 mb-8 drop-shadow-2xl">
+          <h1 className="hero-title text-5xl md:text-8xl lg:text-9xl font-serif font-bold tracking-tighter text-foreground mb-8 drop-shadow-2xl">
             Victory Night
             <br />
-            <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-amber-200 to-amber-500">
+            <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
               Reflection
             </span>
           </h1>

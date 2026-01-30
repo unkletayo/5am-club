@@ -19,7 +19,7 @@ export const links: Route.LinksFunction = () => [];
 import { useEffect } from "react";
 import Lenis from "lenis";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {

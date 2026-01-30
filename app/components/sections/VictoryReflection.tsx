@@ -1,8 +1,7 @@
-import { useRef } from "react";
 import { Container } from "@/components/ui/container";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGsap } from "@/hooks/use-gsap";
+import gsap from "gsap";
+import { useRef } from "react";
 
 export function VictoryInitial() {
   const sectionRef = useRef<HTMLDivElement>(null);

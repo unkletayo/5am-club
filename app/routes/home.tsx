@@ -2,6 +2,7 @@ import { Closing } from "@/components/sections/Closing";
 import { Consistency } from "@/components/sections/Consistency";
 import { Footer } from "@/components/sections/Footer";
 import { Formula202020 } from "@/components/sections/Formula202020";
+import { HabitInstallation } from "@/components/sections/HabitInstallation";
 import { Hero } from "@/components/sections/Hero";
 import { Identity } from "@/components/sections/Identity";
 import { InteriorEmpires } from "@/components/sections/InteriorEmpires";
@@ -75,6 +76,11 @@ export default function Home() {
       {/* 6. Adversity (The Forge) */}
       <div id="forge-section">
         <TheForge />
+      </div>
+
+      {/* 6.5 Habit Installation Protocol */}
+      <div id="habit-section">
+        <HabitInstallation />
       </div>
 
       {/* 7. 30-Day Journey (Consistency) */}

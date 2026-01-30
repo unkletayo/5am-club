@@ -2,11 +2,14 @@ import { Closing } from "@/components/sections/Closing";
 import { Consistency } from "@/components/sections/Consistency";
 import { Footer } from "@/components/sections/Footer";
 import { Formula202020 } from "@/components/sections/Formula202020";
+import { HabitInstallation } from "@/components/sections/HabitInstallation";
 import { Hero } from "@/components/sections/Hero";
 import { Identity } from "@/components/sections/Identity";
 import { InteriorEmpires } from "@/components/sections/InteriorEmpires";
 import { Oscillation } from "@/components/sections/Oscillation";
+import { Quiz } from "@/components/sections/Quiz";
 import { TheForge } from "@/components/sections/TheForge";
+import { VictoryAudit } from "@/components/sections/VictoryAudit";
 import { Preloader } from "@/components/ui/preloader";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { useEffect, useState } from "react";
@@ -76,15 +79,27 @@ export default function Home() {
         <TheForge />
       </div>
 
+      {/* 6.5 Habit Installation Protocol */}
+      <div id="habit-section">
+        <HabitInstallation />
+      </div>
+
       {/* 7. 30-Day Journey (Consistency) */}
       <div id="consistency-section">
         <Consistency />
+      </div>
+
+      {/* 7.5 Mastery Audit Quiz */}
+      <div id="quiz-section">
+        <Quiz />
       </div>
 
       {/* 8. Victory is not loud */}
       <div id="closing-section">
         <Closing />
       </div>
+
+      <VictoryAudit />
 
       {/* 9. Engagement & Credits */}
       <Footer />

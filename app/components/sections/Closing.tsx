@@ -23,7 +23,7 @@ export function Closing() {
   }, [container]);
 
   return (
-    <section ref={container} className="min-h-[80vh] flex items-center justify-center bg-background text-center py-24">
+    <section ref={container} className="min-h-[60vh] flex items-center justify-center bg-background text-center py-12">
       <Container>
         <div className="max-w-4xl mx-auto">
           <h2 className="closing-ele text-5xl md:text-7xl font-serif font-bold mb-12 text-foreground">

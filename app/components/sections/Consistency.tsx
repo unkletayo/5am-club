@@ -46,7 +46,7 @@ export function Consistency() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((c, i) => (
-            <div key={i} className="consistency-card bg-muted/20 p-8 rounded-2xl border border-transparent hover:border-primary/30 transition-colors">
+            <div key={i} className="consistency-card bg-card p-8 rounded-2xl border border-border hover:border-primary/50 transition-colors">
               <h3 className="text-2xl font-bold mb-4">{c.title}</h3>
               <p className="text-muted-foreground">{c.text}</p>
             </div>

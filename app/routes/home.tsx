@@ -19,38 +19,57 @@ export function meta({ }: Route.MetaArgs) {
   ];
 }
 
+import { ThemeSwitcher } from "@/components/ui/theme-switcher";
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <main className="relative bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-primary-foreground">
+    <main className="relative bg-background text-foreground transition-colors duration-700 overflow-x-hidden selection:bg-primary selection:text-primary-foreground">
       {loading && <Preloader onComplete={() => setLoading(false)} />}
 
+      <ThemeSwitcher />
       <ScrollProgress />
 
       {/* 1. Attention Soldiers */}
-      <Hero />
+      <div id="hero-section">
+        <Hero />
+      </div>
 
       {/* 2. Greatness is Installed */}
-      <Identity />
+      <div id="identity-section">
+        <Identity />
+      </div>
 
       {/* 3. The Formula (Identity Shaping) */}
-      <Formula202020 />
+      <div id="formula-section">
+        <Formula202020 />
+      </div>
 
       {/* 4. Recovery (Oscillation) */}
-      <Oscillation />
+      <div id="oscillation-section">
+        <Oscillation />
+      </div>
 
       {/* 5. Interior Empires (Existing model) */}
-      <InteriorEmpires />
+      <div id="interior-section">
+        <InteriorEmpires />
+      </div>
 
       {/* 6. Adversity (The Forge) */}
-      <TheForge />
+      <div id="forge-section">
+        <TheForge />
+      </div>
 
       {/* 7. 30-Day Journey (Consistency) */}
-      <Consistency />
+      <div id="consistency-section">
+        <Consistency />
+      </div>
 
       {/* 8. Victory is not loud */}
-      <Closing />
+      <div id="closing-section">
+        <Closing />
+      </div>
 
       {/* 9. Engagement & Credits */}
       <Footer />

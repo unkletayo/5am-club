@@ -33,15 +33,15 @@ export function Footer() {
   ];
 
   return (
-    <footer ref={footerRef} className="bg-[#050505] text-white py-24 border-t border-white/5 relative z-10">
+    <footer ref={footerRef} className="bg-background text-foreground py-24 border-t border-border relative z-10">
       <Container>
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 mb-24">
           <div>
-            <h3 className="text-amber-500 font-bold tracking-widest text-sm uppercase mb-8">💬 Let's Talk</h3>
+            <h3 className="text-primary font-bold tracking-widest text-sm uppercase mb-8">💬 Let's Talk</h3>
             <div className="space-y-8">
               {questions.map((q, i) => (
                 <div key={i} className="question-item">
-                  <p className="text-xl md:text-2xl font-light hover:text-amber-100 transition-colors leading-normal cursor-default">
+                  <p className="text-xl md:text-2xl font-light hover:text-primary/70 transition-colors leading-normal cursor-default">
                     {q}
                   </p>
                 </div>
@@ -50,7 +50,7 @@ export function Footer() {
           </div>
 
           <div className="space-y-12">
-            <div className="question-item bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
+            <div className="question-item bg-card p-8 rounded-2xl border border-border backdrop-blur-sm">
               <h3 className="font-serif text-2xl font-bold mb-6 text-primary">🔑 Core Takeaway</h3>
               <ul className="space-y-4 text-muted-foreground">
                 <li className="flex gap-3"><span className="text-primary">•</span> Greatness is a daily decision.</li>

@@ -23,19 +23,19 @@ export function Closing() {
   }, [container]);
 
   return (
-    <section ref={container} className="min-h-[80vh] flex items-center justify-center bg-gradient-to-t from-zinc-950 to-background text-center py-24">
+    <section ref={container} className="min-h-[80vh] flex items-center justify-center bg-background text-center py-24">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <h2 className="closing-ele text-5xl md:text-7xl font-serif font-bold mb-12 text-zinc-100">
+          <h2 className="closing-ele text-5xl md:text-7xl font-serif font-bold mb-12 text-foreground">
             Victory is not loud.
           </h2>
-          <p className="closing-ele text-2xl md:text-3xl text-zinc-400 mb-16">
+          <p className="closing-ele text-2xl md:text-3xl text-muted-foreground mb-16">
             It is built quietly, daily, in the dark.<br />
             Will you keep your promise to yourself tomorrow morning?
           </p>
 
           <div className="closing-ele">
-            <Button size="lg" className="text-lg px-12 py-8 rounded-full bg-amber-600 hover:bg-amber-700 text-white shadow-2xl shadow-amber-900/20 transition-all hover:scale-105">
+            <Button size="lg" className="text-lg px-12 py-8 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xl shadow-primary/20 transition-all hover:scale-105">
               Rise.
             </Button>
           </div>

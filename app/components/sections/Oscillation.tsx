@@ -8,17 +8,6 @@ export function Oscillation() {
   const circleRef = useRef<HTMLDivElement>(null);
 
   useGsap(() => {
-    // Breathing Animation
-    gsap.to(circleRef.current, {
-      scale: 1.5,
-      opacity: 0.8,
-      duration: 4,
-      boxShadow: "0 0 100px 20px rgba(66, 153, 225, 0.4)",
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    });
-
     // Text reveals on scroll
     gsap.from(".oscillation-text", {
       y: 50,
@@ -38,7 +27,7 @@ export function Oscillation() {
       {/* Background Pulse Circle */}
       <div
         ref={circleRef}
-        className="absolute w-64 h-64 md:w-96 md:h-96 bg-blue-900/20 rounded-full blur-3xl z-0"
+        className="absolute w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl z-0 animate-breathing"
       />
 
       <Container className="relative z-10 text-center">
@@ -54,9 +43,9 @@ export function Oscillation() {
 
           <div className="oscillation-text py-12">
             <span className="text-xs font-mono tracking-widest text-primary uppercase mb-4 block">The Elite Equation</span>
-            <p className="text-3xl md:text-5xl font-serif text-amber-200">
+            <p className="text-3xl md:text-5xl font-serif text-foreground">
               Pressure + Refueling <br />
-              = Growth + Endurance
+              <span className="text-primary">= Growth + Endurance</span>
             </p>
           </div>
 

@@ -13,10 +13,9 @@ export function Identity() {
     const words = textRef.current.querySelectorAll(".word");
 
     gsap.fromTo(words,
-      { opacity: 0.1, color: "#333" },
+      { opacity: 0.1 },
       {
         opacity: 1,
-        color: "#fff",
         stagger: 0.1,
         scrollTrigger: {
           trigger: container.current,
@@ -33,7 +32,7 @@ export function Identity() {
   const words = content.split(" ");
 
   return (
-    <section ref={container} className="min-h-[80vh] flex items-center justify-center bg-black py-24">
+    <section ref={container} className="min-h-[80vh] flex items-center justify-center bg-background py-24">
       <Container className="max-w-5xl">
         <div ref={textRef} className="flex flex-wrap justify-center gap-x-3 gap-y-2 md:gap-x-4 md:gap-y-4 text-center">
           {words.map((word, i) => (

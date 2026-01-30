@@ -9,6 +9,7 @@ import { InteriorEmpires } from "@/components/sections/InteriorEmpires";
 import { Oscillation } from "@/components/sections/Oscillation";
 import { Quiz } from "@/components/sections/Quiz";
 import { TheForge } from "@/components/sections/TheForge";
+import { VictoryAudit } from "@/components/sections/VictoryAudit";
 import { Preloader } from "@/components/ui/preloader";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { useEffect, useState } from "react";
@@ -97,6 +98,8 @@ export default function Home() {
       <div id="closing-section">
         <Closing />
       </div>
+
+      <VictoryAudit />
 
       {/* 9. Engagement & Credits */}
       <Footer />

@@ -1,16 +1,16 @@
-import { useState } from "react";
-import type { Route } from "./+types/home";
+import { Closing } from "@/components/sections/Closing";
+import { Consistency } from "@/components/sections/Consistency";
+import { Footer } from "@/components/sections/Footer";
+import { Formula202020 } from "@/components/sections/Formula202020";
 import { Hero } from "@/components/sections/Hero";
 import { Identity } from "@/components/sections/Identity";
-import { Formula202020 } from "@/components/sections/Formula202020";
-import { Oscillation } from "@/components/sections/Oscillation";
 import { InteriorEmpires } from "@/components/sections/InteriorEmpires";
+import { Oscillation } from "@/components/sections/Oscillation";
 import { TheForge } from "@/components/sections/TheForge";
-import { Consistency } from "@/components/sections/Consistency";
-import { Closing } from "@/components/sections/Closing";
-import { Footer } from "@/components/sections/Footer";
-import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { Preloader } from "@/components/ui/preloader";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { useEffect, useState } from "react";
+import type { Route } from "./+types/home";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -23,6 +23,13 @@ import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <main className="relative bg-background text-foreground transition-colors duration-700 overflow-x-hidden selection:bg-primary selection:text-primary-foreground">

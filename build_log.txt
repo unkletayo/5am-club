@@ -1,0 +1,129 @@
+
+> 5am-club@ build /Users/Camyn/Desktop/workspace/emprinte/5am-club
+> react-router build
+
+vite v7.3.1 building client environment for production...
+transforming...
+
+/noise.png referenced in /noise.png didn't resolve at build time, it will remain unchanged to be resolved at runtime
+✓ 33 modules transformed.
+✗ Build failed in 742ms
+[vite]: Rollup failed to resolve import "@fontsource/inter/variable.css" from "/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/root.tsx".
+This is most likely unintended because it can break your application at runtime.
+If you do want to externalize this module explicitly add it to
+`build.rollupOptions.external`
+    at viteLog (file:///Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/vite@7.3.1_@types+node@22.19.7_jiti@2.6.1_lightningcss@1.30.2/node_modules/vite/dist/node/chunks/config.js:33635:57)
+    at file:///Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/vite@7.3.1_@types+node@22.19.7_jiti@2.6.1_lightningcss@1.30.2/node_modules/vite/dist/node/chunks/config.js:33669:73
+    at onwarn (/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/@react-router+dev@7.12.0_@react-router+serve@7.12.0_react-router@7.12.0_react-dom@19.2._996b1b829c0c348461da52390af8a005/node_modules/@react-router/dev/dist/cli/index.js:1661:11)
+    at file:///Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/vite@7.3.1_@types+node@22.19.7_jiti@2.6.1_lightningcss@1.30.2/node_modules/vite/dist/node/chunks/config.js:33669:28
+    at onRollupLog (file:///Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/vite@7.3.1_@types+node@22.19.7_jiti@2.6.1_lightningcss@1.30.2/node_modules/vite/dist/node/chunks/config.js:33664:63)
+    at onLog (file:///Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/vite@7.3.1_@types+node@22.19.7_jiti@2.6.1_lightningcss@1.30.2/node_modules/vite/dist/node/chunks/config.js:33467:4)
+    at file:///Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/rollup@4.57.1/node_modules/rollup/dist/es/shared/node-entry.js:20958:32
+    at Object.logger [as onLog] (file:///Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/rollup@4.57.1/node_modules/rollup/dist/es/shared/node-entry.js:22945:9)
+    at ModuleLoader.handleInvalidResolvedId (file:///Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/rollup@4.57.1/node_modules/rollup/dist/es/shared/node-entry.js:21689:26)
+    at file:///Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/rollup@4.57.1/node_modules/rollup/dist/es/shared/node-entry.js:21647:26 {
+  watchFiles: [
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/root.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/@react-router+dev@7.12.0_@react-router+serve@7.12.0_react-router@7.12.0_react-dom@19.2._996b1b829c0c348461da52390af8a005/node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/routes/home.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/react@19.2.4/node_modules/react/jsx-runtime.js',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/react@19.2.4/node_modules/react/index.js',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react-dom/client.js',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/react-router@7.12.0_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/react-router/dist/development/dom-export.mjs',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/package.json',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/react@19.2.4/node_modules/react/cjs/react-jsx-runtime.production.js',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/react@19.2.4/node_modules/react/cjs/react.production.js',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react-dom/cjs/react-dom-client.production.js',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react-dom/index.js',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/scheduler@0.27.0/node_modules/scheduler/index.js',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/react-router@7.12.0_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/react-router/dist/development/chunk-FNSCYPCZ.mjs',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/react-router@7.12.0_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/react-router/dist/development/chunk-EPOLDU6W.mjs',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/components/sections/Hero.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/components/sections/Philosophy.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/components/sections/Problem.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/components/sections/Formula202020.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/components/sections/InteriorEmpires.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/components/sections/HabitInstallation.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/components/sections/RealLifeApplication.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/components/sections/Closing.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/components/ui/scroll-progress.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/app.css',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/tailwindcss@4.1.18/node_modules/tailwindcss/index.css',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/scheduler@0.27.0/node_modules/scheduler/cjs/scheduler.production.js',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react-dom/cjs/react-dom.production.js',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/setup-docs.sh',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/routes.ts',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/welcome/logo-dark.svg',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/welcome/logo-light.svg',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/welcome/welcome.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/components/ui/container.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/components/ui/button.tsx',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/hooks/use-scroll-progress.ts',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/app/lib/utils.ts',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/Dockerfile',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/react-router.config.ts',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/web-design-guidelines/SKILL.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/frontend-design/SKILL.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/frontend-design/LICENSE.txt',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/SKILL.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-cache-storage.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/bundle-conditional.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/bundle-preload.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-combine-iterations.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/advanced-use-latest.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-length-check-first.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-derived-state.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/async-defer-await.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rendering-activity.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/server-dedup-props.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-defer-reads.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/async-api-routes.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-dependencies.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-set-map-lookups.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/async-dependencies.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-min-max-loop.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-cache-property-access.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-early-exit.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-index-maps.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/server-parallel-fetching.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/server-cache-lru.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/server-after-nonblocking.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/client-event-listeners.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-transitions.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/client-swr-dedup.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/server-cache-react.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/server-serialization.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rendering-svg-precision.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-memo.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/advanced-init-once.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rendering-content-visibility.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/async-parallel.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-batch-dom-css.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/server-auth-actions.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-cache-function-results.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/js-hoist-regexp.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rendering-conditional-render.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/client-localstorage-schema.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md',
+    '/Users/Camyn/Desktop/workspace/emprinte/5am-club/.agents/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md',
+    ... 83 more items
+  ]
+}
+ ELIFECYCLE  Command failed with exit code 1.

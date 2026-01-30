@@ -95,7 +95,7 @@ export function Formula202020() {
         <div ref={trackRef} className="h-full bg-primary origin-left scale-x-0 w-full" />
       </div>
 
-      <div ref={panelsRef} className="flex flex-nowrap w-[300%] h-[60vh] md:h-[70vh] items-center mt-32 md:mt-0 relative z-10">
+      <div ref={panelsRef} className="flex flex-nowrap w-[300%] h-[60vh] md:h-[70vh] items-center mt-64 md:mt-32 md:mt-0 relative z-10">
         {steps.map((step, index) => (
           <div
             key={index}

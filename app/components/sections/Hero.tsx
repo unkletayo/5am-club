@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Container } from "@/components/ui/container";
 import { useGsap } from "@/hooks/use-gsap";
 import gsap from "gsap";
+import { TriangleAlert } from "lucide-react";
 
 export function Hero() {
   const container = useRef<HTMLDivElement>(null);
@@ -45,9 +46,10 @@ export function Hero() {
       <Container className="relative z-10 flex flex-col items-center text-center px-4">
         <div ref={contentRef} className="max-w-4xl mx-auto flex flex-col items-center">
 
-          <div className="hero-alert mb-8 px-4 py-1 border border-destructive/50 bg-destructive/10 rounded-full">
+          <div className="hero-alert mb-8 px-4 py-1 border border-destructive/50 bg-destructive/10 rounded-full flex items-center gap-2">
+            <TriangleAlert className="w-4 h-4 text-destructive" />
             <span className="text-destructive font-bold tracking-widest uppercase text-xs md:text-sm">
-              ⚠️ Attention Soldiers
+              Attention Soldiers
             </span>
           </div>
 

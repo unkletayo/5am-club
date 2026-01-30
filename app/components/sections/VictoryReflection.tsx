@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/container";
 import { useGsap } from "@/hooks/use-gsap";
 import gsap from "gsap";
 import { useRef } from "react";
+import { Trophy, TriangleAlert } from "lucide-react";
 
 export function VictoryInitial() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -50,14 +51,18 @@ export function VictoryInitial() {
   return (
     <section ref={sectionRef} className="py-32 md:py-48 bg-background relative z-10">
       <Container className="max-w-4xl mx-auto px-6">
-        <h2 ref={headingRef} className="text-center font-serif text-3xl md:text-5xl lg:text-6xl text-primary font-bold tracking-tight mb-20 md:mb-32">
-          🏆 VICTORY NIGHT REFLECTION
+        <h2 ref={headingRef} className="flex flex-col md:flex-row items-center justify-center gap-4 text-center font-serif text-3xl md:text-5xl lg:text-6xl text-primary font-bold tracking-tight mb-20 md:mb-32">
+          <Trophy className="w-12 h-12 md:w-16 md:h-16 text-primary" strokeWidth={1.5} />
+          <span>VICTORY NIGHT REFLECTION</span>
         </h2>
 
         <div ref={textRef} className="space-y-12 text-lg md:text-2xl font-light leading-relaxed text-foreground/90">
-          <p className="font-bold text-destructive/90 tracking-widest uppercase text-sm md:text-base mb-8 block">
-            Attention Soldiers ⚠️
-          </p>
+          <div className="flex items-center gap-2 font-bold text-destructive/90 tracking-widest uppercase text-sm md:text-base mb-8">
+            <TriangleAlert className="w-5 h-5 text-destructive" />
+            <p className="block">
+              Attention Soldiers
+            </p>
+          </div>
 
           <p>
             Before you scroll—pause. This is bigger than a book summary. This is about how we choose to live.

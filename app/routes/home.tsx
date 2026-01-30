@@ -6,6 +6,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Identity } from "@/components/sections/Identity";
 import { InteriorEmpires } from "@/components/sections/InteriorEmpires";
 import { Oscillation } from "@/components/sections/Oscillation";
+import { Quiz } from "@/components/sections/Quiz";
 import { TheForge } from "@/components/sections/TheForge";
 import { Preloader } from "@/components/ui/preloader";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
@@ -79,6 +80,11 @@ export default function Home() {
       {/* 7. 30-Day Journey (Consistency) */}
       <div id="consistency-section">
         <Consistency />
+      </div>
+
+      {/* 7.5 Mastery Audit Quiz */}
+      <div id="quiz-section">
+        <Quiz />
       </div>
 
       {/* 8. Victory is not loud */}

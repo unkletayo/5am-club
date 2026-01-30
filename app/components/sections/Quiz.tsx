@@ -54,6 +54,41 @@ const QUIZ_QUESTIONS: Question[] = [
     options: ["Deep Recovery", "Total Focus", "Constant Learning", "Massive Action"],
     correct: 0,
     explanation: "You cannot remain at the peak without honoring the cycle of recovery."
+  },
+  {
+    id: 6,
+    text: "The 3-Step Success Formula: Better Awareness -> Better Choices -> ________",
+    options: ["Better Money", "Better Results", "Better Health", "Better Luck"],
+    correct: 1,
+    explanation: "With better awareness, you make better choices, leading to world-class results."
+  },
+  {
+    id: 7,
+    text: "What is the 'Magic Hour'?",
+    options: ["5:00 AM to 6:00 AM", "The Hour of Sleep", "Lunch Break", "Midnight"],
+    correct: 0,
+    explanation: "The Victory Hour is when you prepare your mind and body for a legendary day."
+  },
+  {
+    id: 8,
+    text: "The 10-3-2-1 Rule for Sleep: 10 hours before bed, stop ________",
+    options: ["Working", "Eating", "Caffeine", "Using Phones"],
+    correct: 2,
+    explanation: "Caffeine should be cut 10 hours before bed to ensure deep, restorative sleep."
+  },
+  {
+    id: 9,
+    text: "What is the 'Tight Bubble of Total Focus'?",
+    options: ["A special room", "A focus supplement", "A strategy to block all distractions", "A morning workout"],
+    correct: 2,
+    explanation: "Protect your creative genius by walling yourself off from all low-value interruptions."
+  },
+  {
+    id: 10,
+    text: "The 60/10 Method involves 60 minutes of work followed by ____ minutes of recovery.",
+    options: ["5", "10", "15", "20"],
+    correct: 1,
+    explanation: "Work for 60 minutes, then take 10 minutes to decompress and recharge."
   }
 ];
 
@@ -232,12 +267,15 @@ export function Quiz() {
                   <div className="inline-flex p-8 rounded-full bg-primary/10 mb-4">
                     <Trophy className="w-20 h-20 text-primary animate-bounce" />
                   </div>
-                  <div>
+                  <div className="space-y-4">
                     <h5 className="text-5xl font-serif font-bold mb-4">
-                      {score === QUIZ_QUESTIONS.length ? "Legendary Status" : score >= 3 ? "Titan Rising" : "Still Learning"}
+                      {score === QUIZ_QUESTIONS.length ? "Legendary Status" : score >= 7 ? "Titan Rising" : "Still Learning"}
                     </h5>
                     <p className="text-6xl font-mono text-primary font-bold">
                       {score}/{QUIZ_QUESTIONS.length}
+                    </p>
+                    <p className="text-amber-500 font-bold tracking-widest text-lg animate-pulse">
+                      📸 TAKE A SCREENSHOT & SHARE!
                     </p>
                   </div>
 

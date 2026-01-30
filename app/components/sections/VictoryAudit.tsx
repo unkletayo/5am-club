@@ -186,7 +186,7 @@ export function VictoryAudit() {
                 </div>
                 <h5 className="text-xl md:text-3xl font-serif font-bold">Share Everything At Once</h5>
                 <p className="text-muted-foreground text-sm md:text-base max-w-md mx-auto">
-                  Bundle all your reflections into a single powerful report for your group.
+                  Share all your reflections into a single powerful report for your group.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto">

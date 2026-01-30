@@ -74,7 +74,7 @@ function InteractiveQuestion({ question, value, onChange, index }: InteractiveQu
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
                 placeholder="Share your thoughts..."
-                className="w-full bg-card border border-border/50 rounded-xl p-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary/30 transition-all min-h-[100px] text-lg"
+                className="w-full max-w-full bg-card border border-border/50 rounded-xl p-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary/30 transition-all min-h-[100px] text-base md:text-lg resize-none"
               />
               <div className="flex justify-end gap-3">
                 <Button
@@ -178,39 +178,39 @@ export function Footer() {
               ))}
             </div>
 
-            <div className="footer-actions mt-12 p-8 md:p-12 rounded-3xl bg-card border-2 border-primary/10 flex flex-col items-center text-center gap-8 transition-all hover:border-primary/20 shadow-2xl">
+            <div className="footer-actions mt-12 p-6 md:p-12 rounded-2xl md:rounded-3xl bg-card border-2 border-primary/10 flex flex-col items-center text-center gap-6 md:gap-8 transition-all hover:border-primary/20 shadow-2xl overflow-hidden">
               <div className="space-y-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
-                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] md:text-xs font-bold uppercase tracking-widest">
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary animate-pulse" />
                   Audit in Progress
                 </div>
-                <h5 className="text-2xl md:text-3xl font-serif font-bold">Share Everything At Once</h5>
-                <p className="text-muted-foreground max-w-md mx-auto">
-                  Tired of sharing one by one? Click the button below to bundle all your reflections into a single powerful report for your group.
+                <h5 className="text-xl md:text-3xl font-serif font-bold">Share Everything At Once</h5>
+                <p className="text-muted-foreground text-sm md:text-base max-w-md mx-auto">
+                  Bundle all your reflections into a single powerful report for your group.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto">
                 <Button
                   onClick={handleCopyAll}
                   disabled={!hasAnswers}
                   variant="outline"
-                  className="rounded-full gap-2 px-8 py-7 text-lg border-primary/20 transition-all active:scale-95"
+                  className="rounded-full gap-2 px-6 md:px-8 h-12 md:h-16 text-sm md:text-lg border-primary/20 transition-all active:scale-95"
                 >
-                  {shared ? <Check className="w-5 h-5 text-emerald-500" /> : <Send className="w-5 h-5" />}
+                  {shared ? <Check className="w-4 h-4 md:w-5 md:h-5 text-emerald-500" /> : <Send className="w-4 h-4 md:w-5 md:h-5" />}
                   {shared ? "Copied All" : "Copy Full Report"}
                 </Button>
                 <Button
                   onClick={handleWhatsAppAll}
                   disabled={!hasAnswers}
                   variant="default"
-                  className="rounded-full gap-3 px-10 py-7 text-lg bg-[#25D366] hover:bg-[#20bd5a] border-none text-white font-bold shadow-[0_0_30px_-5px_#25D366] hover:shadow-[0_0_40px_-5px_#25D366] transition-all hover:scale-105 active:scale-95"
+                  className="rounded-full gap-3 px-8 md:px-10 h-12 md:h-16 text-sm md:text-lg bg-[#25D366] hover:bg-[#20bd5a] border-none text-white font-bold shadow-[0_0_20px_-5px_#25D366] hover:shadow-[0_0_40px_-5px_#25D366] transition-all hover:scale-105 active:scale-95 w-full sm:w-auto"
                 >
                   <WhatsAppIcon />
-                  Share Everything on WhatsApp
+                  Share to WhatsApp
                 </Button>
               </div>
               {hasAnswers && (
-                <p className="text-xs text-primary/60 font-medium animate-bounce">
+                <p className="text-[10px] md:text-xs text-primary/60 font-medium animate-bounce mt-2">
                   ↑ Ready to inspire your community?
                 </p>
               )}
@@ -220,7 +220,7 @@ export function Footer() {
           <div className="lg:col-span-1" />
 
           <div className="lg:col-span-4 space-y-12">
-            <div className="question-item bg-card p-10 rounded-2xl border border-border backdrop-blur-sm">
+            <div className="question-item bg-card p-6 md:p-10 rounded-2xl border border-border backdrop-blur-sm">
               <h3 className="font-serif text-3xl font-bold mb-8 text-primary">🔑 Core Takeaways</h3>
               <ul className="space-y-6 text-xl text-muted-foreground">
                 <li className="flex gap-4"><span className="text-primary font-bold">•</span> Greatness is a daily decision.</li>

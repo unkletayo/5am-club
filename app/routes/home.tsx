@@ -25,15 +25,23 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Reset scroll on mount/refresh
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
+
+  const handlePreloaderComplete = () => {
+    setLoading(false);
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    // Force reset again for some browsers
+    setTimeout(() => window.scrollTo(0, 0), 0);
+  };
 
   return (
     <main className="relative bg-background text-foreground transition-colors duration-700 overflow-x-hidden selection:bg-primary selection:text-primary-foreground">
-      {loading && <Preloader onComplete={() => setLoading(false)} />}
+      {loading && <Preloader onComplete={handlePreloaderComplete} />}
 
       <ThemeSwitcher />
       <ScrollProgress />

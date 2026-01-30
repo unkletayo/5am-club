@@ -23,6 +23,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
     const tl = gsap.timeline({
       delay: 0.1, // Minimal delay for smoother mount
       onComplete: () => {
+        window.scrollTo(0, 0);
         onComplete();
         gsap.to(container.current, {
           display: "none",

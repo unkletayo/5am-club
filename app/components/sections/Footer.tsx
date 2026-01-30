@@ -19,22 +19,25 @@ export function Footer() {
                 className="h-16 w-auto"
               />
             </a>
-            <div className="text-sm text-muted-foreground flex flex-col items-center md:items-start gap-4">
-              <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                <a
-                  href="https://www.linkedin.com/in/olalekan-gbolahan-owolabi"
-                  className="inline-flex items-center px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/5 hover:border-primary/50 text-primary transition-all font-medium"
-                >
-                  Gabriel Owolabi <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/adetayo-akinsanya/"
-                  className="inline-flex items-center px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/5 hover:border-primary/50 text-primary transition-all font-medium"
-                >
-                  Adetayo Akinsanya <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
+            <div className="text-sm text-muted-foreground flex flex-col items-center md:items-start gap-6">
+              <div className="flex flex-col items-center md:items-start gap-3">
+                <span className="text-xs uppercase tracking-widest opacity-50 font-bold">Crafted with Excellence by</span>
+                <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                  <a
+                    href="https://www.linkedin.com/in/olalekan-gbolahan-owolabi"
+                    className="group inline-flex items-center px-6 py-3 rounded-full border border-primary/20 bg-primary/5 hover:bg-primary/10 hover:border-primary/50 text-primary transition-all font-bold shadow-sm"
+                  >
+                    Gabriel Owolabi <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/adetayo-akinsanya/"
+                    className="group inline-flex items-center px-6 py-3 rounded-full border border-primary/20 bg-primary/5 hover:bg-primary/10 hover:border-primary/50 text-primary transition-all font-bold shadow-sm"
+                  >
+                    Adetayo Akinsanya <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </div>
               </div>
-              <p className="opacity-50">© 2026 Emprinte Readers Hub • Curated with Excellence</p>
+              <p className="opacity-50 text-xs">© 2026 Emprinte Readers Hub • Mastery is the Standard</p>
             </div>
           </div>
 

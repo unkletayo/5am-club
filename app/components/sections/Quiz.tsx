@@ -211,9 +211,19 @@ export function Quiz() {
     }, 2000);
   };
 
+  const getRank = (score: number) => {
+    if (score === 10) return { title: "Grand Commander", icon: "🎖️", sub: "Elite Mastery" };
+    if (score >= 8) return { title: "Major General", icon: "⚔️", sub: "Master Strategist" };
+    if (score >= 6) return { title: "Captain", icon: "🎖️", sub: "Rising Vanguard" };
+    if (score >= 4) return { title: "Sergeant", icon: "🛡️", sub: "Dedicated Soldier" };
+    if (score >= 1) return { title: "Private", icon: "🔫", sub: "Dawn Initiate" };
+    return { title: "Recruit", icon: "⚓", sub: "Untapped Potential" };
+  };
+
   const handleShareResult = () => {
-    const status = score === activeQuestions.length ? "LEGENDARY 💎" : score >= 7 ? "A RISING TITAN 🔥" : "ON THE JOURNEY 🌅";
-    const text = `*5 AM Club Audit Result*\n\nI just scored *${score}/${activeQuestions.length}* in the Mastery Quiz!\n\n*Status:* ${status}\n\nJoin the club and elevate your life here: ${window.location.origin}`;
+    const rank = getRank(score);
+    // Use plain text descriptors for high compatibility on WhatsApp
+    const text = `*5 AM Club Audit Result*\n\nI just scored *${score}/${activeQuestions.length}* in the Mastery Quiz!\n\n*Rank:* ${rank.title.toUpperCase()}\n*Status:* ${rank.sub}\n\nJoin the club and elevate your life here: ${window.location.origin}`;
     const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
   };
@@ -346,12 +356,15 @@ export function Quiz() {
                   </div>
                   <div className="space-y-4">
                     <h5 className="text-5xl font-serif font-bold mb-4">
-                      {score === activeQuestions.length ? "Legendary Status" : score >= 7 ? "Titan Rising" : "Still Learning"}
+                      {getRank(score).title} {getRank(score).icon}
                     </h5>
                     <p className="text-6xl font-mono text-primary font-bold">
                       {score}/{activeQuestions.length}
                     </p>
-                    <p className="text-amber-500 font-bold tracking-widest text-lg animate-pulse">
+                    <p className="text-muted-foreground text-xl font-serif italic">
+                      {getRank(score).sub}
+                    </p>
+                    <p className="text-amber-500 font-bold tracking-widest text-lg animate-pulse pt-4">
                       📸 TAKE A SCREENSHOT & SHARE!
                     </p>
                   </div>
@@ -359,7 +372,7 @@ export function Quiz() {
                   <p className="text-xl text-muted-foreground max-w-lg mx-auto leading-relaxed">
                     {score === activeQuestions.length
                       ? "You have fully installed the 5 AM Philosophy. You are ready to lead your empire."
-                      : "The installation is in progress. Every morning is a new chance to reach mastery."}
+                      : "The installation is in progress. Every dawn is an opportunity to ascend the ranks."}
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
-import gsap from "gsap/dist/gsap";
+import gsap from "gsap";
 import { useGsap } from "@/hooks/use-gsap";
 
 export function Footer() {

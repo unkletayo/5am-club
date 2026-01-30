@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { useGsap } from "@/hooks/use-gsap";
-import gsap from "gsap/dist/gsap";
+import gsap from "gsap";
 
 export function Preloader({ onComplete }: { onComplete: () => void }) {
   const container = useRef<HTMLDivElement>(null);
